@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Quiz CBS - CRC Pro</title>
+    <title>Proxy Kahoot</title>
     <style>
         /* 🌟 Modifier le fond de la page */
         body {
@@ -25,6 +25,20 @@
     </style>
 </head>
 <body>
-    <iframe id="kahoot-frame" src="https://cors-anywhere.herokuapp.com/https://kahoot.it/" allowfullscreen></iframe>
+    <iframe id="kahoot-frame" src="https://kahoot.it/" allowfullscreen></iframe>
+
+    <!-- 🌟 SCRIPT POUR MODIFIER LE FOND DE L'IFRAME -->
+    <script>
+        document.getElementById("kahoot-frame").onload = function() {
+            try {
+                const iframe = document.getElementById("kahoot-frame").contentWindow.document;
+                const style = iframe.createElement('style');
+                style.innerHTML = "body { background: red !important; }";  // 🌟 Change le fond en rouge
+                iframe.head.appendChild(style);
+            } catch (error) {
+                console.error("Impossible de modifier l'iframe : Restrictions CORS", error);
+            }
+        };
+    </script>
 </body>
 </html>
