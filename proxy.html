@@ -2,9 +2,10 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Proxy Kahoot</title>
+    <title>Quiz CBS - CRC Pro</title>
     <style>
-         body {
+        /* 🌟 Modifier le fond de la page */
+        body {
             margin: 0;
             padding: 0;
             background: linear-gradient(45deg, #1e3c72, #2a5298); /* Dégradé bleu */
@@ -13,6 +14,7 @@
             justify-content: center;
             align-items: center;
         }
+        /* 🌟 Modifier l'affichage de l'iframe */
         iframe {
             width: 90vw;
             height: 90vh;
@@ -23,6 +25,6 @@
     </style>
 </head>
 <body>
-    <iframe src="https://kahoot.it/" allowfullscreen></iframe>
+    <iframe id="kahoot-frame" src="https://cors-anywhere.herokuapp.com/https://kahoot.it/" allowfullscreen></iframe>
 </body>
 </html>
